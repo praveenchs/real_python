@@ -1,2 +1,7 @@
 # real_python
-All excercise are from online portal
+This repo tracks my python learning experience .
+I follow the tutuorial from Learn Python to get hands-on experience with Python.
+
+Reference :
+https://www.learnpython.org/en/Welcome
+
