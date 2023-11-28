@@ -84,3 +84,55 @@ F[Cache Variables and Functions] --> H[Program A];
 F[Cache Variables and Functions] --> I[Re-Import Module];
 ```
 
+
+
+## Extending module load path
+
+As we know , python interpreter looks for the modules first in the same folder if not found looks for it in in-built modules .
+There are couple of way to tell python interpreter to look for modules in specific directories .
+
+    PYTHONPATH=/foo python game.py
+
+This executes game.py, and enables the script to load modules from the foo directory, as well as the local directory.
+
+
+## Explore build-in modules
+
+Import a build-in module ,which helps create ,read data from URLs 
+
+    import urllib
+
+We can look for functions within the module using dir function
+
+    dir(urllib)
+
+We can read more about the function using help function
+
+    help(urllib.urlopen)
+
+
+## Write packages
+
+Packages are directories containing modules and/or packages . 
+
+Each package MUST have a file called "__init__.py". This file can be an empty file .
+This file indicates that the directory is a python package .
+
+We can import the package the same way we import a module .
+
+Example : create a package called "foo" and a module "bar" 
+
+    mkdir foo
+    touch foo/__init__.py
+    vi foo/bar.py
+
+    import foo.bar   # We have to use the foo prefix everytime the module bar is used
+    or
+    from foo import bar  # Here we can just refer to the module bar 
+
+
+ The __init__.py file can also decide which module can be accessed externally while keeping other internal .
+
+    __init__.py
+
+    __all__ = ["bar"]
