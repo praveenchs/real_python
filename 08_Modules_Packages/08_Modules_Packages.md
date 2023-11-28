@@ -66,11 +66,13 @@ What happens when the module is imported :
 4.  Any new Program which imports the module , will simply retrieve it from the cached module object .
 5.  If the imported module is not available in the module cache , python will initialize the module.
    
-'''mermaid
+
+
+```mermaid
 graph TD;
 A[Python Interpreter] --> B{Module Cache}
-B --> C{Module A}
-B --> D{Module B}
-C --> E{Variables and Functions}
-D --> E
-'''
+    B-->C{Module A};
+    B-->D{Module B};
+    C-->E{Variables and Functions};
+    D-->E;
+```
