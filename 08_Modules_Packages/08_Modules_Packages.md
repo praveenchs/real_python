@@ -75,9 +75,12 @@ What happens when the module is imported :
 
 ```mermaid
 graph TD;
-A[Python Interpreter] --> B{Module Cache}
-    B-->C{Module A};
-    B-->D{Module B};
-    C-->E{Variables and Functions};
-    D-->E;
+A[Import Module] --> B[Python Interpreter];
+B[Python Interpreter] --> C[Scan and Compile to bytecode];
+C[Scan and Compile to bytecode] --> D[bytecode is executed]
+D[bytecode is executed] --> E[Initialize module];
+D[bytecode is executed] --> F[Cache Variables and Functions];
+F[Cache Variables and Functions] --> H[Program A];
+F[Cache Variables and Functions] --> I[Re-Import Module];
 ```
+
