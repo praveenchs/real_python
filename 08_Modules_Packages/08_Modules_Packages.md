@@ -11,9 +11,9 @@ Every python file is a module and file name is considered the module name
 
 Python Module can have a set of
 
-     1.    **Functions**
-     2.    **Classes**
-     3.    **Variables**
+     1.    Functions
+     2.    Classes
+     3.    Variables
     
 defined and implemented 
 
@@ -22,11 +22,13 @@ defined and implemented
 Step 1: Import Module
 Modules are imported from other modules using the import command.
 If the file name is not found in the folder , python interpreter will look for  in-built modules
-ex: import draw
+
+    ex: import draw
 
 Step 2: Using a function from module 
-Below example draw is the module imported and draw_game is the function from draw module .
-ex : draw.draw_game()
+Below example draw is the module imported and draw_game is the function from draw module
+
+    ex : draw.draw_game()
 
 
 ## Create a sample application to demonstrate Modules 
@@ -41,17 +43,20 @@ The Python script game.py implements the game. It uses the function draw_game fr
 
 from draw import draw_game
 
-def main():
-    draw_game(result) => Name of the module is not refered anymore
+
+    def main():
+        draw_game(result) 
+        # Name of the module is not refered anymore
 
 Advantage of using namespace over module is that you do not refer the module name everytime you use the function
 Disadvantage is that we cannot have two objects with the same name in the namespace .
 
 ## Import all objects from module
-from draw import *
+    from draw import *
 
-def main():
-    draw_game(result) => Again Name of the module is not refered anymore
+    def main():
+        draw_game(result) 
+        # Again Name of the module is not refered anymore
 
 ## Module initialization
 
