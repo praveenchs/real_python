@@ -1,4 +1,4 @@
-cars_per_cap  ,country,drives_right
+cars_per_cap,country,drives_right
 809,Australia,TRUE
 731,Japan,TRUE
 588,India,FALSE

@@ -29,10 +29,27 @@ print(brics)
 #Another way to create dataframe is to use csv file with pandas .
 
 import pandas as pd
-
+#convert csv to panda dataframes
 cars = pd.read_csv('cars.csv')
-
 print(cars)
 
 
 
+#Indexing dataframes
+
+cars_index = pd.read_csv('cars.csv',index_col=0)
+
+# Print out country column as Pandas Series
+print(cars_index['country'])
+
+#print out country column as Pandas DataFrame
+print(cars_index[['country']])
+
+#Print dataframes with country and drives_right column
+print(cars_index[['country', 'drives_right']])
+
+
+## We can also fetch data based on rows(observations), similar to slicing
+print(cars[0:4:2])
+
+#Use loc and iloc 
